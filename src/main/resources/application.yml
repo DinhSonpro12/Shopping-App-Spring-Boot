@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: shopapp
+  servlet:
+    multipart:
+      max-file-size: 5MB          # Giới hạn kích thước file tải lên
+      max-request-size: 10MB      # Giới hạn kích thước toàn bộ request (bao gồm tất cả các phần của form)
+  datasource:
+    url: jdbc:mysql://localhost:3306/shopapp?useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+  security:
+    user:
+      name: admin
+      password: 123456
+      roles: ADMIN
+server:
+  port: 8081
+  session:
+    timeout: 30m
+
+
+api:
+  v1:
+    prefix: /api/v1
+  v2:
+    prefix: /api/v2
+
+
+jwt:
+    secretKey: RJDgvHS4nPpvfcJOZqaaEnXvDkj2ayn1OZHmEoTjAAI=
+    expirationTime: 36000000
+    token-prefix: Bearer
+    header: Authorization
+
+#debug: true
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+
+
