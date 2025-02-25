@@ -1,10 +1,9 @@
 # **ShopApp**  
 **ShopApp** is a RESTful e-commerce application built using ***Spring Boot*** and ***MySQL***. It provides essential shopping functionalities such as category management, product listing, order processing, and user authentication with ***Spring Security***.  
 
-<p align="center"><img src="./images/shopapp.png" title="ShopApp"/></p>  
-<p align="center"><u>Image: ShopApp</u></p>  
-
 ---
+
+
 
 # **Table of Contents**  
 - [**Introductions**](#introductions)  
@@ -44,13 +43,13 @@ ShopApp/                <Project>
 │   │   ├── java/com/shopapp/
 │   │   │   ├── config/       : Security & application configurations
 │   │   │   ├── controllers/  : Handle API requests
-│   │   │   ├── dto/          : Data transfer objects
-│   │   │   ├── entities/     : Database entity models
+│   │   │   ├── dtos/          : Data transfer objects
+│   │   │   ├── models/     : Database entity models
 │   │   │   ├── repositories/ : Database access layer (JPA)
 │   │   │   ├── services/     : Business logic & service layer
 │   │   │   └── ShopApp.java  : Main Spring Boot application
 │   │   ├── resources/
-│   │   │   ├── application.properties  : Application configuration
+│   │   │   ├── application.yml  : Application configuration
 │   │   │   ├── data.sql                 : Sample data for testing
 │   │   │   └── schema.sql               : Database schema definition
 │   ├── test/          : Unit tests and integration tests
@@ -153,12 +152,38 @@ jwt.secret=${JWT_SECRET}
 ---
 
 # **Illustrations**  
-📌 **Database Schema**  
-<p align="center"><img src="./images/db_schema.png" title="Database Schema"/></p>  
-<p align="center"><u>Image: ShopApp Database Schema</u></p>  
+📌 **Database** 
+## ***List of tables***
+| **Table Name**   | **Description** |
+|-----------------|--------------------------------|
+| `users`        | Stores user account information |
+| `products`     | List of available products |
+| `categories`   | Product categories |
+| `orders`       | Order details and status |
+| `order_details` | Products included in an order |
+| `roles`        | Stores user roles and permissions |
+| `tokens`       | Stores authentication tokens |  
+
+## ***ERD Diagram***
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2ba6ddf3-16c4-450e-82bc-4e0899ee6d96" 
+       alt="ERD Diagram" title="ERD Diagram"/>
+</p>
+<p align="center"><u>Image: ERD Diagram </u></p>  
+
+
+
+<!-- ## ***SQL Schema*** -->
+<!-- -->
+
+
 
 📌 **API Workflow**  
-<p align="center"><img src="./images/api_workflow.png" title="API Workflow"/></p>  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2ba6ddf3-16c4-450e-82bc-4e0899ee6d96" 
+       alt="ERD Diagram" title="ERD Diagram"/>
+</p>
 <p align="center"><u>Image: API Request Flow</u></p>  
 
 ---
@@ -176,7 +201,7 @@ jwt.secret=${JWT_SECRET}
 ---
 
 # **Author**  
-📌 ***Name***: [**Your Name**](https://github.com/your-username)  
-📌 ***Email***: your-email@example.com  
+📌 ***Name***: [**Dinh Trong Tung Son**](https://github.com/DinhSonpro12)
+📌 ***Email***: dinhtrongtungson2626@gmail.com  
 
 💬 ***If you have any questions or suggestions, feel free to contact me via email.*** 🚀
